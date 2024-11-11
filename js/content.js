@@ -2,7 +2,7 @@ function loadContent(topic) {
     const mainContent = document.getElementById("main-content");
 
     const content = {
-        "section1": "<h2>Section 1</h2><p>This is content for Section 1.</p>",
+        "section1": "<h2>Section 1</h2><p>This is content for Section 1 kjhhjghjk.</p>",
         "topic1.1": `
             <h2>Topic 1.1</h2>
             <p>This is the content for Topic 1.1 under Section 1.</p>
