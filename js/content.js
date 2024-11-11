@@ -6,7 +6,8 @@ function loadContent(topic) {
         "topic1.1": `
             <h2>Create User</h2>
             <p>adduser --home /var/lib/username username
-            <br><b>This will create user username with Home Directory</b></p>
+            document.write("\n");
+            <b>This will create user username with Home Directory</b></p>
 
         `,
         "topic1.2": "<h2>Topic 1.2</h2><p>This is the content for Topic 1.2 under Section 1 99999.</p>",
