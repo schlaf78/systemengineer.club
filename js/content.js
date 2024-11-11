@@ -5,7 +5,8 @@ function loadContent(topic) {
         "section1": "<h2>Ubuntu</h2><p>This is content for Ubuntu section</p>",
         "topic1.1": `
             <h2>Create User</h2>
-            <p>Ubuntu</p>
+            <p>adduser --home /var/lib/username username
+            <b>This will create user username with Homedirectory</b></p>
 
         `,
         "topic1.2": "<h2>Topic 1.2</h2><p>This is the content for Topic 1.2 under Section 1 99999.</p>",
