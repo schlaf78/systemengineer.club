@@ -6,7 +6,7 @@ function loadContent(topic) {
         "topic1.1": `
             <h2>Create User</h2>
             <p>adduser --home /var/lib/username username
-            document.write("\n");
+            \n
             <b>This will create user username with Home Directory</b></p>
 
         `,
