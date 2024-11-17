@@ -3,37 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Wiki</title>
+    <title>Dynamic Wiki</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar with expandable tree -->
-        <nav id="sidebar">
-            <ul class="tree">
-                <li><span class="caret">Ubuntu</span>
-                    <ul class="nested">
-                        <li onclick="loadContent('topic1.1')">Create User</li>
-                        <li onclick="loadContent('topic1.2')">Topic 1.2</li>
-                    </ul>
-                </li>
-                <li><span class="caret">Windows</span>
-                    <ul class="nested">
-                        <li onclick="loadContent('topic2.1')">Topic 2.1</li>
-                        <li onclick="loadContent('topic2.2')">Topic 2.2</li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Main content area -->
-        <main id="main-content">
-            <h1>Welcome to System Engineer Wiki</h1>
-            <p>Select an item from the tree to display its content here.</p>
-        </main>
-    </div>
-
-    <script src="js/tree.js"></script>
-    <script src="js/content.js"></script>
+<ul id="treeview">
+    <!-- Dynamic menu populated here -->
+</ul>
+<div id="main-content">
+    <p>Welcome! Select a section or topic to see the content.</p>
+</div>
+<script src="js/content.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "sections": [
+    {
+      "name": "section1",
+      "displayName": "Section 1",
+      "topics": [
+        { "file": "topic1_1.html", "name": "Topic 1.1" },
+        { "file": "topic1_2.html", "name": "Topic 1.2" }
+      ]
+    },
+    {
+      "name": "section2",
+      "displayName": "Section 2",
+      "topics": [
+        { "file": "topic2_1.html", "name": "Topic 2.1" },
+        { "file": "topic2_2.html", "name": "Topic 2.2" }
+      ]
+    }
+  ]
+}
