@@ -1,20 +1,39 @@
-function loadContent(topic) {
+// Function to load content from a file
+async function loadFileContent(filePath) {
+    try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`Error fetching file: ${response.statusText}`);
+        
+        const content = await response.text();
+        return content;
+    } catch (error) {
+        console.error("Failed to load file content:", error);
+        return "<p>Failed to load content. Please try again later.</p>";
+    }
+}
+
+// Function to display content for each topic
+async function loadContent(topic) {
     const mainContent = document.getElementById("main-content");
 
-    const content = {
-        "section1": "<h2>Ubuntu</h2><p>This is content for Ubuntu section</p>",
-        "topic1.1": `
-            <h2>Create User</h2>
-            <p>adduser --home /var/lib/username username
-            \n
-            <b>This will create user username with Home Directory</b></p>
-
-        `,
-        "topic1.2": "<h2>Topic 1.2</h2><p>This is the content for Topic 1.2 under Section 1 99999.</p>",
-        "section2": "<h2>Windows</h2><p>This is content for Section 2.</p>",
-        "topic2.1": "<h2>Topic 2.1</h2><p>This is the content for Topic 2.1 under Section 2.</p>",
-        "topic2.2": "<h2>Topic 2.2</h2><p>This is the content for Topic 2.2 under Section 2.</p>"
+    // Map topics to corresponding files
+    const fileMap = {
+        "section1": "section1/index.html",
+        "topic1.1": "section1/topic1_1.html",
+        "topic1.2": "section1/topic1_2.html",
+        "section2": "section2/index.html",
+        "topic2.1": "section2/topic2_1.html",
+        "topic2.2": "section2/topic2_2.html"
     };
 
-    mainContent.innerHTML = content[topic] || "<p>Content not found.</p>";
+    // Get the file path for the selected topic
+    const filePath = fileMap[topic];
+
+    // Load and display the content
+    if (filePath) {
+        const content = await loadFileContent(filePath);
+        mainContent.innerHTML = content;
+    } else {
+        mainContent.innerHTML = "<p>Content not found.</p>";
+    }
 }
